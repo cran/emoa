@@ -1,0 +1,154 @@
+commit f548cf0b8051d8bc4600d993de6968caf9d50352
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-14 22:52:41 +0200
+
+    Fix miscapitalized .R file extension in unit test runner.
+
+commit da19b744d4e196841e5a12b6994f1f5ac748be7f
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-14 22:45:05 +0200
+
+    Fix CFLAGS in Makevars.
+    
+    Last fix did not actually work. Instead of SHLIB_CFLAGS, ALL_CFLAGS and
+    ALL_CPPFLAGS need to be passed to CC.
+
+commit 19ca3cc068ff6b61c6ef920817a01e7acdf50106
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-14 22:19:03 +0200
+
+    Fix Makevars to use SHLIB_CFLAGS.
+
+commit 2339bfcbf790ef2c62e8ef60f99c140581d33b1d
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-14 22:11:38 +0200
+
+    Package documentation for release.
+
+commit 70b30a0b91ee97bad6e1c65fb14482623936fc1f
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 22:37:15 +0200
+
+    Implement automatic versioning.
+    
+    This commit adds an automatic versioning scheme to the Makefile. If this
+    is a clean working copy, we count the number of commits since the last
+    tagged minor release (tag name 'v<major>.<minor>') and then use
+    '<major>.<minor>-<#commits>' as the version number. If the working copy
+    is not clean, we again determine the major and minor version from the
+    last tagged commit and then use the number of seconds since the
+    Beginning of Time(tm) as the revision. This ensures, that
+    dirty/development packages always have a higher revision number than
+    checked in releases.
+
+commit 8e770a1adaafa88c0d67c3aa3ef86220df41afa3
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 09:04:05 +0200
+
+    Remove Version: from DESCRIPTION.
+
+commit a12119c3772f44a516e46532fc925f468bf090d8
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 08:06:43 +0200
+
+    Fix typo in *_indicator() documentation.
+
+commit d8bb611f07266293c69a22e13ce549e200e88ca2
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 01:13:04 +0200
+
+    Fix unit tests to match implementation with regard to Inf handling.
+
+commit 4708542ec8a28ee637fbf06464698dc47a82f554
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 01:11:53 +0200
+
+    Fix encoding issue in dominated_hypervolume() documentation.
+
+commit a4c9914b24f3747131bec9472a58f56a5b258ad3
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 00:47:33 +0200
+
+    Clean up hypervolume documentation.
+
+commit 485c24db267bd34e1f704e9f79811a566a4e280a
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-12 00:34:40 +0200
+
+    Update Fonseca et.al. hypervolume code to version 1.31rc1.
+
+commit 3096d0645a463ffda619fc4703066190cbcdbabd
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-11 19:50:42 +0200
+
+    Improve CEC2007 data set documentation
+    
+    This change also fixes a small 'bug' in the convert.r script that
+    creates the data files during the package build process. Previously the
+    metric column was not converted to a factor but instead left as a
+    character vector.
+
+commit 1cbee1fd8b1381c485d315585914f1f568be9db9
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-11 19:42:39 +0200
+
+    Change Description: of package to reflect current scope.
+
+commit dc53618bbb6c59c2a5235e75145f7bb549ca87be
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-11 19:40:17 +0200
+
+    Add preliminary documentation to *_control() functions.
+
+commit 4d8d6701aeffdca401c48a51d4d8fad6660efd1d
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-10 22:17:28 +0200
+
+    Add control parameter framework.
+    
+    All EMOA implementations should pass their control list() through the
+    appropriate *_control() functions to validate the parameters or fill in
+    missing values with default values. Because all parameters are now
+    stored in the control list(), the default logger hat to be adapted to
+    look in the control list for a reference point instead of in the
+    environment of the EMOA function.
+
+commit 77a949f8eb7b40edf34b2bb8ed6a928635e1a510
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-10 20:16:53 +0200
+
+    Remove %dominates% operator.
+
+commit 7bcde3b81b4e623b26d249a0d1ba85be98496126
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-10 20:13:24 +0200
+
+    Add a simple logging framework.
+    
+    Generalize logging for EMOAs by providing generic log events (currently
+    'start', 'step' and 'stop') and hooks to log these. Default
+    implementations for a console and a null logger are provided.
+
+commit 50e7fb75ea3f786f9d4580b4c319506b49711d4e
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-03-11 15:32:29 +0100
+
+    Generalize nds_cd_selection() to more than one individual to be eliminated.
+
+commit 3336f357b5a19eda03f3382e8f27a9ee4bc4fabb
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-02-28 22:11:50 +0100
+
+    Small whitespace fixes.
+
+commit 6de17cfa3491877666809c72721e8da7aa15438c
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-02-28 22:11:32 +0100
+
+    Add static linkage to internal functions.
+
+commit 8abbf386a241185fecd8caf24a5525389646454a
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2009-11-02 01:24:06 +0100
+
+    Fix build machinery.
