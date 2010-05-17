@@ -33,9 +33,9 @@ the hypervolume soley dominated by that point.
 front approximation from a given set of points and
 \code{\link{nds_hv_selection}} for a selection strategy based on
 the hypervolume contribution of each point.}
-\references{This code uses the Fonseca et.al. code from
+\references{This code uses version 1.3 of the hypervolume code available from
 \url{http://iridia.ulb.ac.be/~manuel/hypervolume}. For a
-description of the used algorithm see
+description of the algorithm see
 
 Carlos M. Fonseca, Luis Paquete, and Manuel Lopez-Ibanez. \emph{An
 improved dimension-sweep algorithm for the hypervolume

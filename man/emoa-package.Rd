@@ -7,7 +7,7 @@ multiobjective optimization algorithms (EMOA). The long term goal
 is to also provide standard implementations of the most common
 EMOA in use today.}
 \details{Without the hard work of many researchers who have published their
-source code under a liberal license, this package would not ave
+source code under a liberal license, this package would not have
 been possible. In alphabetical order they are
 
 \itemize{
