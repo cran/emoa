@@ -1,3 +1,67 @@
+commit e1a48202e0db2c265e3ddc0569e67ebfe26a85b6
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-01-13 23:32:45 +0100
+
+    Add RUnit package to list of suggested packages in DESCRIPTION.
+    
+    RUnit is required to run the test suite and therefore belongs in the
+    list of suggested packages in order to pass R CMD check.
+
+commit e517304c72b245c290668b0d31c1f4eea1b50fc9
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-01-13 23:23:12 +0100
+
+    Fix bug in hypervolume_contribution().
+    
+    For more than two dimensions, hypervolume_contribution() produced false
+    results, because of a row/column mismatch.
+    
+    USER VISIBLE CHANGE: sms_emoa() should now work on functions which
+      have more than two objectives. hypervolume_contribtion() should return
+      positive values instead of all zeros for sets of points in three or
+      more dimensional space.
+    
+    RATIONAL: Bugfix.
+    
+    WHAT TO CHANGE: Nothing. But if you've used a previous version of the
+      package for many objective optimization, you should check your results
+      and rerun the optimization.
+
+commit c7e332ed8f346606943f0dc5574d361f0c7c21a0
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-01-03 21:31:21 +0100
+
+    Update use of replicate for the upcoming R release (2.13).
+    
+    Thanks to Martin Maechler for pointing out the change and sending a
+    patch!
+
+commit e373860a02efb64a7ea36c400f3725cab886a66f
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-12-22 19:37:04 +0100
+
+    Fix a small bug in nondominated_points().
+    
+    nondominated_points() incorrectly dropped one dimension when only one
+    point is nondominated.
+
+commit 85558e367c7a5e8bb77a975298c3bff52d5759d2
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-09-15 15:50:03 +0200
+
+    Add new operator 'is_maximally_dominated'.
+    
+    Sometimes you are only interested in the individuals on the last front
+    after nd sorting. We call these maximally dominated solutions. There is
+    now a function do directly check which points are maximally dominates.
+    It is aptly called 'is_maxiamally_dominated'.
+
+commit 69a26dd9995bb5ed4ca57ef34ba0d51a07dd50f0
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2010-05-18 02:34:47 +0200
+
+    Correct URL in DESCRIPTION.
+
 commit cd57a1ce6a2a439d420856738d84e7de87197837
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2010-05-17 22:15:48 +0200

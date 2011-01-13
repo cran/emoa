@@ -29,6 +29,20 @@ test.is_dominated <- function() {
   }  
 }
 
+test.is_maximally_dominated <- function() {
+  k <- nrow(points)
+  n <- ncol(points)
+  ## Check for different permutations of the rows and columns of
+  ## points.
+  for (i in 1:10) {
+    o <- sample(1:n)
+    p <- sample(1:k)
+    m <- points[p,o]
+    res <- is_maximally_dominated(m)
+    checkEquals(res, max(no[o]) == no[o])
+  }  
+}
+
 test.nds_rank <- function() {
   k <- nrow(points)
   n <- ncol(points)
@@ -47,6 +61,11 @@ test.nds_rank.args <- function() {
   checkException(nds_rank(list(1, 2, 3)))
   checkException(nds_rank(data.frame(x=1:10)))
   checkException(nds_rank(points, partial="a"))
+}
+
+## Bug fixed i
+test.single_nds <- function() {
+  checkEquals(dim(nondominated_points(points[,-(1:3)])), c(3, 1))
 }
 
 ##test_dominates_op <- function() {
