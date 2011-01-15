@@ -1,3 +1,9 @@
+commit 626f0af82879f626297fcdf81767eae8146bbc37
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-01-15 13:05:49 +0100
+
+    Remove debug output from hypervolume.c.
+
 commit e1a48202e0db2c265e3ddc0569e67ebfe26a85b6
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-01-13 23:32:45 +0100
