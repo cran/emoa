@@ -1,3 +1,22 @@
+commit 840e2e7c72b356813977c38f533589f0bd57de3a
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-01-21 20:49:16 +0100
+
+    Fix another bug in hypervolume_contribution().
+    
+    For more than two dimensions, hypervolume_contribution() permuted the
+    columns of the matrix passed in. This resulted from a missing
+    duplicated() in do_hv_contrib in hypervolume.c.
+    
+    USER VISIBLE CHANGE: sms_emoa() should finally work on three or more
+      dimensional problems.
+    
+    RATIONAL: Bugfix.
+    
+    WHAT TO CHANGE: Nothing. But if you've used a previous version of the
+      package for many objective optimization, you should check your results
+      and rerun the optimization.
+
 commit 626f0af82879f626297fcdf81767eae8146bbc37
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-01-15 13:05:49 +0100
