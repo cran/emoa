@@ -1,3 +1,16 @@
+commit 6d48e86d8b1c8aafed7b6297d6c6032ddc991698
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-06-17 10:00:23 +0200
+
+    Pass '...' to hypervolume_contribution in nds_hv_selection.
+    
+    USER VISIBLE CHANGE: The reference point can now be passed
+      to hypervolume_contribution.
+    
+    RATIONAL: Bugfix.
+    
+    WHAT TO CHANGE: Nothing.
+
 commit 840e2e7c72b356813977c38f533589f0bd57de3a
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-01-21 20:49:16 +0100

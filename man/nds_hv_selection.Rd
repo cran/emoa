@@ -18,7 +18,8 @@ limited to selecting a single individual for replacement.
 \keyword{nonlinear}
 \arguments{\item{values}{Matrix of function values.}
 \item{n}{Number of individuals to select for replacement.}
-\item{...}{optimal parameters.}
+\item{...}{Optional parameters passed to
+\code{\link{hypervolume_contribution}}.}
 }
 \alias{nds_cd_selection}
 
