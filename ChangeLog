@@ -1,3 +1,25 @@
+commit f299fef9642095d771dab378411c879d371c8bab
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-06-29 18:29:18 +0200
+
+    Fix bug in epsilon_indicator().
+    
+    The matricies passed to epsilon indicator were interpreted as row-wise
+    instead of column-wise point clouds. Because of this, incorrect values
+    were calculated. These reflect the "epsilon indicator" for the
+    "points" formed by transposing the matrix passed in.
+    
+    This resulted in incorrect values
+    
+    USER VISIBLE CHANGE: epsilon_indicator() now correctly calculates the
+      value of additive epsilon indicator. All previously calculated values
+      were incorrect and should be discarded.
+    
+    RATIONAL: Bugfix.
+    
+    WHAT TO CHANGE: Nothing. But all experiments conducted using the
+      epsilon indicator need to be rerun.
+
 commit 6d48e86d8b1c8aafed7b6297d6c6032ddc991698
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-06-17 10:00:23 +0200
