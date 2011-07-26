@@ -1,3 +1,49 @@
+commit 9316a375843fecef563e678c634e35a6abaf7545
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-07-26 11:26:42 +0200
+
+    Add another unit test for the epsilon_indicator().
+
+commit d1faf5f839a8ac51dceeb74cd9d277a68dc5d57f
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-07-26 11:24:17 +0200
+
+    Rename precomputed_weight_vectors.def to precomputed_weight_vectors.h
+    
+    R requires all files in the src/ directory to have a known extension.
+    This changes the customary .def extension for X-macros to .h in order
+    to comply.
+
+commit 782a51b5becaaf21d214f3df9ef860fa6a650f71
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-07-06 17:11:04 +0200
+
+    Change all .Call()s to call-by-symbol instead of call-by-string.
+    
+    Instead of passing the string name of the function to .Call(), we now
+    pass in the symbol which is bound via the NAMESPACE file. This is a
+    bit faster and at the same time more robust.
+
+commit 3aedc8f7d3aeff2f5791a13b540bffe28eb009cb
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-07-06 11:19:11 +0200
+
+    Improve performance of R indicators.
+    
+    Weights for common combinations of lambda and number of objectives are
+    now precomputed at compile time, drastically reducing the time it
+    takes to compte the R indicators.
+
+commit e1b619b90229d40753aff580831a251d3007500a
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-07-04 19:20:11 +0200
+
+    Add function to calculate which points are on the edge of a front.
+    
+    The new function which_points_on_edge() returns the indices of the
+    points which are on the edge of a front. This function is lightly
+    tested, use with care!
+
 commit f299fef9642095d771dab378411c879d371c8bab
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-06-29 18:29:18 +0200
