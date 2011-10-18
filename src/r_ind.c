@@ -23,6 +23,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#define error(...) exit(-1)
 #else
 #include <R.h>
 #include <Rmath.h>
@@ -88,7 +89,7 @@ static void int2kary(int x, const int basek, const int digits, int *kary) {
     int i;
     int val;
     if (x >= ipow(basek,digits)) {
-        printf("Number in int2kary() too large. Exiting.\n");
+        error("Number in int2kary() too large. Exiting.");
         return;
     }
     val = digits-1;
@@ -123,7 +124,7 @@ size_t choose(int r, int k) {
 /* 
  * create_weight_vectors - sample from all possible weight vectors
  */
-static double *create_weight_vectors(const int s, const int k, int *pnwv) {
+static double *create_weight_vectors(const int s, const int k, unsigned int *pnwv) {
     int c = 0, i = 0;
     size_t nwv = (int) choose(s + k - 1, k - 1);
     double *wv = (double *)malloc(nwv*k * sizeof(double));
@@ -153,8 +154,8 @@ void dump_weights(int lambda, int objectives) {
     int nwv;    
     double *weight_vectors = create_weight_vectors(lambda, objectives, &nwv);
     
-    printf("const int number_of_weights_%i_%i = %i;\n", lambda, objectives, nwv);
-    printf("const double weights_%i_%i[] = {\n", lambda, objectives);
+    printf("unsigned int number_of_weights_%i_%i = %i;\n", lambda, objectives, nwv);
+    printf("double weights_%i_%i[] = {\n", lambda, objectives);
     for (current = 0; current < nwv * objectives; ++current) {
         printf("%f, ", weight_vectors[current]);
     }
@@ -166,7 +167,7 @@ int main(int argc, char **argv) {
     printf("#ifndef WEIGHT_VECTORS_H\n\n");
 #define DO_PRECOMPUTED_WEIGHT_VECTOR(L, D) dump_weights(L, D);
 #include "precomputed_weight_vectors.h"
-    printf("\n#endif WEIGHT_VECTORS_H\n");
+    printf("\n#endif /* WEIGHT_VECTORS_H */\n");
     return 0;
 }
 
@@ -197,7 +198,7 @@ SEXP do_r_ind(SEXP s_data,
 	error("Nadir and current front must have the same dimension.");
 
     /* Generate weight vectors */
-    int nwv;
+    unsigned int nwv;
     double *wv = NULL;
 
     /* Compute weights: */

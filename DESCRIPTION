@@ -6,7 +6,7 @@ LazyData: yes
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Description: Collection of building blocks for the design and analysis
         of evolutionary multiobjective optimization algorithms.
-Version: 0.4-7
+Version: 0.4-8
 URL: http://www.statistik.tu-dortmund.de/~olafm/software/emoa/
 Suggests: RUnit
 Collate: 'cec2009.r' 'control.R' 'crowding_distance.r' 'dominance.r'
@@ -14,6 +14,6 @@ Collate: 'cec2009.r' 'control.R' 'crowding_distance.r' 'dominance.r'
         'logger.R' 'poly_mutation.r' 'sb_crossover.r' 'selection.r'
         'sympart.r' 'utilities.r'
 Date:
-Packaged: 2011-07-26 09:28:13 UTC; olafm
+Packaged: 2011-10-18 09:12:25 UTC; olafm
 Repository: CRAN
-Date/Publication: 2011-07-26 10:14:32
+Date/Publication: 2011-10-18 10:50:11

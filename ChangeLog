@@ -1,3 +1,33 @@
+commit dc0b5191dea459756d4040cdba7e0c456c11ae8e
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-10-18 11:10:27 +0200
+
+    Initialize variable to make compiler happy.
+
+commit e124e343be4ae2a055cc3f7d610330ba8ff183e2
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-10-18 11:10:07 +0200
+
+    Add error handler.
+
+commit 6a0e0952d3775dddba102eeaaaaffb5fca37b8d9
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-10-18 11:09:45 +0200
+
+    Add comments around symbol after closing #endif in auto-generated code.
+
+commit 3abf4ea0e57b710c583b630a9e98f47c8fe6b706
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-10-17 15:48:30 +0200
+
+    Remove printf() from code and incorrect const modifiert.
+
+commit 1b5b6be7b1079debabbbf771ed532672023a1e01
+Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Date:   2011-09-06 19:58:32 +0200
+
+    Fix CRAN check notes and warnings.
+
 commit 9316a375843fecef563e678c634e35a6abaf7545
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-07-26 11:26:42 +0200
