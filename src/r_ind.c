@@ -3,7 +3,8 @@
  *
  * This file includes both helper functions to calculate R indicator
  * values from R as well as a utility to precompute common weight
- * vector sets to speed up the calculation. To generate the weight vectors, compile this file using
+ * vector sets to speed up the calculation. To generate the weight
+ * vectors, compile this file using
  *
  *  cc -std=c99 -DGENERATE_WV_HEADER -o gen_header r_ind.c
  *
@@ -95,7 +96,7 @@ static void int2kary(int x, const int basek, const int digits, int *kary) {
     val = digits-1;
 
     for (i=0; i<digits; i++)
-        kary[i]=0;
+        kary[i] = 0;
 
     i=0;
     while (x) {
@@ -126,18 +127,17 @@ size_t choose(int r, int k) {
  */
 static double *create_weight_vectors(const int s, const int k, unsigned int *pnwv) {
     int c = 0, i = 0;
-    size_t nwv = (int) choose(s + k - 1, k - 1);
-    double *wv = (double *)malloc(nwv*k * sizeof(double));
+    size_t nwv = choose(s + k - 1, k - 1);
+    double *wv = (double *)malloc(nwv * k * sizeof(double));
     int *count = (int *)malloc(k * sizeof(int));
-    
-    while (i < ipow(s + 1, k)) {
+    while (i < ipow(s + 1, k) && c < nwv) {
         int sum=0;
         int2kary(i, s + 1, k, count);
         for (int j = 0; j < k; ++j)
             sum += count[j];
         if (sum == s) {
             for (int j = 0; j < k; ++j)
-                wv[c*k + j] = (double)count[j] / (double)s;
+                wv[c * k + j] = (double)count[j] / (double)s;
             ++c;
 	}
         ++i;
@@ -172,6 +172,47 @@ int main(int argc, char **argv) {
 }
 
 #else
+
+static double unary_tchebycheff_utility(const double *data, 
+                                 const double *weights,
+                                 const double *ideal,
+                                 const size_t n_objectives) {
+    double max_val = -DBL_MAX;
+    for (size_t i = 0; i < n_objectives; ++i) {
+        const double diff = data[i] - ideal[i];
+        const double weighted_diff = weights[i] * diff;
+        if (weighted_diff > max_val)
+            max_val = weighted_diff;
+    }
+    return -max_val;
+}
+                                 
+SEXP do_unary_r2_ind(SEXP s_data, SEXP s_weights, SEXP s_ideal) {
+    /* Unpack arguments */
+    /* Matrix is in column major order! */
+    UNPACK_REAL_MATRIX(s_data, data, k_data, n_data); 
+    UNPACK_REAL_MATRIX(s_weights, weights, k_weights, n_weights); 
+    UNPACK_REAL_VECTOR(s_ideal, ideal, n_ideal);
+    const int n_objectives = k_data;
+    double res = 0.0;
+    /* Calculate r criterion */
+    for(int i = 0; i < n_weights; ++i) {
+        /* Find max_weights u(data[i] */
+	double max_utility = -DBL_MAX;        
+	for (int j = 0; j < n_data; ++j) {
+	    const double *current_weights = weights + n_objectives * i;
+	    const double *current_data = data + n_objectives * j;
+            
+            const double utility =
+                unary_tchebycheff_utility(current_data, current_weights,
+                                          ideal, n_objectives);
+	    if (utility > max_utility)
+		max_utility = utility;
+	}
+        res += max_utility;
+    }
+    return ScalarReal(-res / n_weights);
+}
 
 /*
  * do_r_ind - R interface routine

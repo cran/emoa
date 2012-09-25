@@ -1,12 +1,21 @@
 \name{emoa_console_logger}
 \alias{emoa_console_logger}
 \title{console logger}
-\usage{emoa_console_logger(...)
+\usage{
+  emoa_console_logger(...)
 }
-\description{Logger object that outputs log messages to the console}
-\details{This is a wrapper that calls \code{emoa_logger(output=output,
-...)} internally and returns that logger.}
-\value{An \code{emoa_logger} object.}
-\arguments{\item{...}{passed to \code{\link{emoa_logger}}.}
+\arguments{
+  \item{...}{passed to \code{\link{emoa_logger}}.}
+}
+\value{
+  An \code{emoa_logger} object.
+}
+\description{
+  Logger object that outputs log messages to the console
+}
+\details{
+  This is a wrapper that calls
+  \code{emoa_logger(output=output, ...)} internally and
+  returns that logger.
 }
 

@@ -1,3 +1,21 @@
+commit 3551c9dd8df2daa6c5963219836e6028f56d2256
+Author: Olaf Mersmann <olafm@p-value.net>
+Date:   2012-09-25 12:51:25 +0200
+
+    Add unary_r2_indicator().
+
+commit 82b1df869248e0fa82ab4fe056750c037229a7fd
+Author: Olaf Mersmann <olafm@p-value.net>
+Date:   2012-09-25 12:50:54 +0200
+
+    Remove duplicate documentation.
+
+commit 521070ee319a310cfe325f73fb1ac3d5da55c5b6
+Author: Olaf Mersmann <olafm@p-value.net>
+Date:   2012-09-25 09:50:07 +0200
+
+    Fix off-by-one error in weight vector computation.
+
 commit dc0b5191dea459756d4040cdba7e0c456c11ae8e
 Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 Date:   2011-10-18 11:10:27 +0200

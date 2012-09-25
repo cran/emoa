@@ -1,12 +1,20 @@
-\name{cec2007_functions}
+\name{sympart}
 \alias{sympart}
 \title{Functions from the CEC 2007 EMOA competition.}
-\usage{sympart(x)
+\usage{
+  sympart(x)
 }
-\description{Functions from the CEC 2007 EMOA competition.}
-\value{Function value.}
-\author{Olaf Mersmann \email{olafm@statistik.tu-dortmund.de}}
+\arguments{
+  \item{x}{Parmater vector.}
+}
+\value{
+  Function value.
+}
+\description{
+  Functions from the CEC 2007 EMOA competition.
+}
+\author{
+  Olaf Mersmann \email{olafm@statistik.tu-dortmund.de}
+}
 \keyword{optimize}
-\arguments{\item{x}{Parmater vector.}
-}
 
