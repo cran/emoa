@@ -50,3 +50,6 @@ useDynLib(emoa,do_sympart)
 useDynLib(emoa,do_unary_r2_ind)
 useDynLib(emoa,do_which_points_on_edge)
 useDynLib(emoa,nondominated_order)
+
+importFrom("graphics", "par")
+importFrom("stats", "runif")

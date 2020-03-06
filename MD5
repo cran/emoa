@@ -1,6 +1,6 @@
 388ae57e75e65d8563941652f743dd4f *ChangeLog
-a59e98058afd182ec7d736fd5fb2d27e *DESCRIPTION
-2f6650dd7e2216fb75bad4b8cc08480a *NAMESPACE
+502f13cafa4797ba8e9268cf3bb90e84 *DESCRIPTION
+8220b52b31e6bce24255bb4dda962047 *NAMESPACE
 28d20019359493872bca36cbb3abd8c7 *R/cec2009.r
 12d3e46f4e47f801bc071578554eb96c *R/control.R
 4960eade70f12abca185820cbe0a7ba1 *R/crowding_distance.r
@@ -15,7 +15,7 @@ b9b6cf45ba887a95d4987b541809c8c9 *R/logger.R
 5658227865e2b601f3294356b978eec7 *R/selection.r
 c570d9e56c03bfd54268e66c54a8a9ae *R/sympart.r
 c271eb1b20393b55d5f9de7ca4daf9bd *R/utilities.r
-b2d30b8fa8edd5962e937b438580c741 *data/cec2007.rda
+b1b190a2353b315ad215bae32adb1cd1 *data/cec2007.rda
 be3761bdff0095422a9eb4795c04ebc6 *inst/unittests/runit-cec2009.r
 b7be8e559a10cebb2e6f2a9f95104cc0 *inst/unittests/runit-ei.r
 edf56d70e5f3a2f8168c548a48a028dc *inst/unittests/runit-front_edge.R
@@ -37,7 +37,7 @@ a8f48d117f316814ea4efcd1313d3d3e *man/dominated_hypervolume.Rd
 f089c759d75dbf7873a1221d0f16026e *man/emoa-package.Rd
 fbcab75a2251b34eac4b197aa7c503a6 *man/emoa_console_logger.Rd
 38144fee802101a273e406852ad65720 *man/emoa_control.Rd
-40cd0180449c93e687325144757c391d *man/emoa_logger.Rd
+ae31e9e3d8b943cd8eb37e38486490e9 *man/emoa_logger.Rd
 9f4f8df261a2574180d30992213fafca *man/emoa_null_logger.Rd
 1162782f02bc9a4ece6015873ed89c9e *man/inbounds.Rd
 bfcda4f95e38e6d5c754e79e12fbad1a *man/nds_hv_selection.Rd

@@ -9,8 +9,6 @@
 
   \item{every}{number of steps of the emoa between
   evaluations.}
-
-  \item{...}{passed to the parent logger factory.}
 }
 \value{
   An \code{emoa_logger} object.
