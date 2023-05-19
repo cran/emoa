@@ -7,14 +7,13 @@ Maintainer: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
 License: GPL-2
 URL: http://www.statistik.tu-dortmund.de/~olafm/software/emoa/
 LazyData: yes
-Version: 0.5-0.1
+Version: 0.5-0.2
 Suggests: RUnit
 Collate: 'cec2009.r' 'control.R' 'crowding_distance.r' 'dominance.r'
         'emoa.r' 'front_edge.R' 'hypervolume.r' 'indicators.r'
         'logger.R' 'poly_mutation.r' 'sb_crossover.r' 'selection.r'
         'sympart.r' 'utilities.r'
-Date:
-Packaged: 2020-03-06 17:24:20 UTC; hornik
+Packaged: 2023-05-10 16:22:41 UTC; ripley
 Repository: CRAN
-Date/Publication: 2020-03-06 17:31:53 UTC
+Date/Publication: 2023-05-19 07:18:39 UTC
 NeedsCompilation: yes

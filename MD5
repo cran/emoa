@@ -1,5 +1,5 @@
 388ae57e75e65d8563941652f743dd4f *ChangeLog
-502f13cafa4797ba8e9268cf3bb90e84 *DESCRIPTION
+1158ff6d6c7a69b8667c84ff28a1cd7c *DESCRIPTION
 8220b52b31e6bce24255bb4dda962047 *NAMESPACE
 28d20019359493872bca36cbb3abd8c7 *R/cec2009.r
 12d3e46f4e47f801bc071578554eb96c *R/control.R
@@ -69,7 +69,7 @@ c73c60eac7199e2c1b2f26754f19f2d2 *src/r_ind.c
 cd480555f2e0f521dc996a81f0f8efcd *src/sb_crossover.c
 7c8d34cbe1c7a0e2783663e7ffb9327b *src/sexp_macros.h
 f697d663f3e629123a72500d33465698 *src/sympart.c
-8a8131c2ab0f87c1b0d565dd0ad2bc55 *src/utilities.c
-9a3fb3fd2295f3ffc7b0df7f4ac8f57e *src/utilities.h
+5f7b74904fb0e19dcb93de52892b7bbd *src/utilities.c
+76621871957f9451605a43a362b9827b *src/utilities.h
 37f0883a538e159344d6b3eecff7cd7c *src/weight_vectors.h
 ab158f3fbc28e50ba6f239bab3873d9f *tests/RUnit.R

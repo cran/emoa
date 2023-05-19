@@ -11,7 +11,7 @@ double clip_to_limits(const double x, const double l, const double u) {
     }
 }
 
-int flip_coin() {
+int flip_coin(void) {
     return(.5 < unif_rand() ? HEADS : TAILS);
 }
 
