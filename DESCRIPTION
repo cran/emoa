@@ -2,18 +2,20 @@ Package: emoa
 Title: Evolutionary Multiobjective Optimization Algorithms
 Description: Collection of building blocks for the design and analysis
         of evolutionary multiobjective optimization algorithms.
-Author: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
-Maintainer: Olaf Mersmann <olafm@statistik.tu-dortmund.de>
+Authors@R: c(
+        person("Olaf", "Mersmann", role=c("aut", "cre"),
+               comment = c(ORCID = "0000-0002-7720-4939"),
+               email = "olafm@p-value.net"))
 License: GPL-2
-URL: http://www.statistik.tu-dortmund.de/~olafm/software/emoa/
+URL: https://github.com/olafmersmann/emoa/
 LazyData: yes
-Version: 0.5-0.2
-Suggests: RUnit
-Collate: 'cec2009.r' 'control.R' 'crowding_distance.r' 'dominance.r'
-        'emoa.r' 'front_edge.R' 'hypervolume.r' 'indicators.r'
-        'logger.R' 'poly_mutation.r' 'sb_crossover.r' 'selection.r'
-        'sympart.r' 'utilities.r'
-Packaged: 2023-05-10 16:22:41 UTC; ripley
-Repository: CRAN
-Date/Publication: 2023-05-19 07:18:39 UTC
+Version: 0.5-2
+Suggests: testthat
+Encoding: UTF-8
+RoxygenNote: 7.2.3
 NeedsCompilation: yes
+Packaged: 2024-01-26 10:04:34 UTC; olafm
+Author: Olaf Mersmann [aut, cre] (<https://orcid.org/0000-0002-7720-4939>)
+Maintainer: Olaf Mersmann <olafm@p-value.net>
+Repository: CRAN
+Date/Publication: 2024-01-26 11:40:02 UTC
