@@ -1,4 +1,4 @@
-ba7f9ff010a1c0f8b5b029ef08e238d4 *DESCRIPTION
+63e7430c8b061123f8705c28e7957662 *DESCRIPTION
 a4231be47c5c1a5d0bbc93a74c1b16e0 *NAMESPACE
 28d20019359493872bca36cbb3abd8c7 *R/cec2009.r
 12d3e46f4e47f801bc071578554eb96c *R/control.R
@@ -14,7 +14,7 @@ a4231be47c5c1a5d0bbc93a74c1b16e0 *NAMESPACE
 5658227865e2b601f3294356b978eec7 *R/selection.r
 c570d9e56c03bfd54268e66c54a8a9ae *R/sympart.r
 c271eb1b20393b55d5f9de7ca4daf9bd *R/utilities.r
-d55db38d72f941ac89d992360fa57ff3 *README.md
+99be4b384ffdf97926905995f761ac1b *README.md
 30b35f5aff5af383b7aad7b1d53c8859 *data/cec2007.rda
 c12cce4ffcb162285965ef364181d083 *man/binary_indicator.Rd
 3468e3a4010c82eb9221fb1a997f49fd *man/cec2007.Rd
@@ -45,9 +45,9 @@ cf79635282555c68c4e443c76df0932b *man/sbx_operator.Rd
 48739c1bd728437b7e082259fc89a221 *src/avl.c
 0cb3368bc8945c9868334885577c5164 *src/avl.h
 97710cb83e7c0700993d5edfece57ade *src/bitstring.h
-be83364e35681ff438bf17a21e4c3327 *src/cec2009.c
-32c2e40d949e377e1aaea6b482441a8e *src/crowding_distance.c
-dfe0eb5d80310fe43eff3a349d296c8c *src/dominance.c
+1171b353c25fd964cafa4e9a88792f73 *src/cec2009.c
+db166015335971122c6750286c920a0c *src/crowding_distance.c
+21430df8e8bbabd2c8092d1505dd4fbc *src/dominance.c
 966b1b7fa267f6a06791171be1cce318 *src/emoa.c
 9b46ef0a38ddbfecfd6929baa4b4798c *src/eps_ind.c
 baafc6ec5810eed315d659668a4209ec *src/extern.h
@@ -60,7 +60,7 @@ f5a91f1230eff9149ddcbe483916e30c *src/precomputed_weight_vectors.h
 87b0de440a1a025e6d733a19fe614305 *src/r_ind.c
 06f74998c07015f8c1d88dabecead22e *src/sb_crossover.c
 3e8bb6face58319a6c73a96dec14c0a3 *src/sexp_macros.h
-8cb1509df69e6350e257514eac61cf8c *src/sympart.c
+9f61a6578a883adad23f324436d0225f *src/sympart.c
 ebd10b8f50b8b9531ad1f494ab9473f6 *src/utilities.c
 32ca51b09551f132698abdeb20cbae0a *src/utilities.h
 6a599be0d1e32387cdcf5a4edf9edbc8 *src/weight_vectors.h
